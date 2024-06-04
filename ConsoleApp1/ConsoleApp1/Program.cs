@@ -220,7 +220,7 @@ void Exo14()
         case "-": Console.WriteLine(number1 - number2); break;
         case "*": Console.WriteLine(number1 * number2); break;
         case "/": Console.WriteLine(number1 / number2); break;
-        default : Console.WriteLine("Wrong entry");break;
+        default: Console.WriteLine("Wrong entry"); break;
     }
 }
 
@@ -240,7 +240,7 @@ void Exo16()
     {
         for (int j = 0; j < 10; j++)
         {
-            Console.WriteLine(i*j);
+            Console.WriteLine($"{i} x {j} = " + (i * j));
         }
     }
 }
