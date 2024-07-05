@@ -1,7 +1,4 @@
-﻿using FirstAPI.Services;
-using System.Collections;
-
-namespace FirstAPI
+﻿namespace FirstApi.Services
 {
     public class EnglishTranslator : ITranslator
     {
@@ -10,22 +7,13 @@ namespace FirstAPI
             word = word.ToLower();
 
             if (word == "bonjour")
-            {
                 return "hello";
-            }
             else if (word == "aurevoir")
-            {
                 return "bye";
-            }
             else if (word == "merci")
-            {
                 return "thanks";
-            }
             else
-            {
-                return "Mot non reconnu";
-            }
-
+                return "le mot n'est pas reconnu";
         }
     }
 }

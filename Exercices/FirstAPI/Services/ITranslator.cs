@@ -1,4 +1,4 @@
-﻿namespace FirstAPI.Services
+﻿namespace FirstApi.Services
 {
     public interface ITranslator
     {

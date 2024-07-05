@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FirstAPI.Controllers
+namespace FirstApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -24,8 +24,11 @@ namespace FirstAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        public IEnumerable<WeatherForecast> Get([FromServices] ILogger<WeatherForecastController> localLogger)
         {
+            this._logger.LogInformation("Weather Forecast requested (by ctor)");
+            localLogger.LogInformation("Weather Forecast requested (by action)");
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

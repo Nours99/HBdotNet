@@ -1,6 +1,6 @@
 using System;
 
-namespace FirstAPI
+namespace FirstApi
 {
     public class WeatherForecast
     {
